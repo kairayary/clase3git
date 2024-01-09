@@ -7,7 +7,11 @@ const db = jsonfile.readFileSync(PATH);
 
 function obtenerProvinciasSegunMeridiano(meridiano) {
 
-    // COMPLETAR
+   
+   
+    let resultado = db.provincias.filter((provincia) => Math.abs(Math.trunc(provincia.centroide.lon)) == meridiano)
+
+    return resultado
 }
 
 // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ COMPLETAR SOLO ESTA FUNCIÓN ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
